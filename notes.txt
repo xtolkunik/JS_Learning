@@ -1,0 +1,42 @@
+JavaScript has dynamic typing: they are determined automatically.
+Value has type, NOT variable!
+
+7 primitive data types:
+
+1. Number: let num = 27;
+2. String: let str = 'Text';
+3. Boolean: let isIsland = true;
+4. Undefined: let children;
+5. Null: empty value; 
+6. Symbol: Value that si unique and connot be changed (not useful)
+7. BigInt: larger integers than the Number type can hold
+
+Operator typeof - check type of variable's value 
+typeof undefined === undefined
+BUT! 
+typeof null === object 
+It's a js bug! 
+
+Variables: let, const and var 
+let - mutable variable 
+const -  immutable variable (cannot be declare without initialize)
+var - legacy version of let. It is function-scoped variable, when let is block scoped. Don't use!
+
+tips: if we initialize variable without declare it, it will be global variable. 
+
+Strings and template literals: 
+We can use different quotes: 'single', "double" or `backticks`.
+Single: 'I'm Nikita' - error 
+Double: "I'm Nikita" + variable - ok
+Backticks: `I'm Nikita ${someVar}` - ok 
+And with backticks we can create multiline strings: 
+`wow
+it's just
+work!` - like this.
+
+Conversion
+We can use manually coversion with Number(), String() or Boolean() functions. 
+If we will try convert some wrong string to number, we will get NaN. But typeof NaN is number. It's just a wrong number. 
+And we have automatic conversion. When we use some operators with different data types: 
+String + Number - convert Number to String and then concate it.
+String - or * or / Number - Try to convert String to Number otherwise NaN.
