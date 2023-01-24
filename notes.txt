@@ -40,3 +40,86 @@ If we will try convert some wrong string to number, we will get NaN. But typeof 
 And we have automatic conversion. When we use some operators with different data types: 
 String + Number - convert Number to String and then concate it.
 String - or * or / Number - Try to convert String to Number otherwise NaN.
+
+Falsy and Truthy conversion 
+Only 5 falsy values: 0, '', undefined, NaN, null 
+
+Different equality operators: == vs ===
+== with type conversion, '18' == 18 - true 
+=== without type conversion, strict version. '18' === 18 - false
+
+
+Strict switch! And don't forget about break line.
+switch(var) {
+    case 'monday': // day === 'monday'
+            console.log();
+            console.log();
+            break;
+    default: 
+            console.log();
+}
+
+
+// IF ELSE HINTS 
+Ternary operator produce a value, so we can use it like expression
+age >= 18 ? console.log('Let's go drink!') : console.log('Oh, sorry man');
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}!`); - because ternary is expression.
+
+
+// FUNCTION SECTION 
+Function declaration vs function expression. 
+We cannot use expression function before variable was been initialize!
+Arrow function has no this pointer/keyword!
+
+//declaration: 
+function f1() {
+    return "it's declaration";
+}
+
+//expression: 
+const f2 = function() {
+    return "it's expression";
+}
+
+//Arrow function 
+const arrFunc = (par1, par2) => {
+    console.log();
+    return "it's arrow function!"
+}
+
+// ARRAY 
+Different initialization types: 
+const arr1 = ['first', 'second'];
+const arr2 = new Array('first', 'second');
+
+arr1.length() - length of the arrray 
+arr1.push('Jay'); - add element to the end of array, return length
+arr1.unshift('John') - add element to the start of array, return length  
+arr1.pop() - remove last element and return it 
+arr1.shift() - remove the first element of the array
+arr1.indexOf('Steven') - return index of element or -1 
+arr1.includes('Steven') - return true/false
+
+// OBJECTS
+It's not a class, it's just a one object, one instance. And it's work like map!
+this points to object, which called function. 
+
+const jonas = {
+    firstName: 'Jonas',
+    secondName: 'Tolkunov',
+    birthYear: 1999;
+    job: 'developer',
+    friends: ['Olya', 'Evgen']
+
+    calcAge: function() {
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    }
+};
+
+jonas.realtionship = 'in love'; - add new property to object 
+
+Dot vs Bracket notation:
+console.log(jonas.firstName); 
+console.log(jonas['first' + 'Name']) - we can use expression within brackets! 
+
